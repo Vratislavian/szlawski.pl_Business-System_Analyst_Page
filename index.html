@@ -1,21 +1,252 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>szlawski.pl - Wizytówka</title>
+    <title>Konrad Szlawski - IT Business & System Analyst</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
-        .container { border: 1px solid #ccc; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
+        :root {
+            --bg-color: #000000;
+            --surface-color: #0c0c0c;
+            --border-color: #222;
+            --text-primary: #ededed;
+            --text-secondary: #888888;
+            --accent-color: #ffffff;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Header & Hero */
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .role {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 650px;
+        }
+
+        .hero-text strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        /* Grid for Competencies */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: #444;
+        }
+
+        .card h3 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .card li::before {
+            content: "•";
+            color: #444;
+            margin-right: 0.5rem;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+
+        .company {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .job-title {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .experience-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer & Links */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Citation style (for reference only, can be deleted) */
+        .cite {
+            font-size: 0.7rem;
+            color: #444;
+            user-select: none;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>szlawski.pl</h1>
-        <p>Strona w budowie. Zapraszam wkrótce!</p>
-        <hr>
-        <p>Kontakt: <a href="https://www.linkedin.com/in/konrad-szlawski/" target="_blank">LinkedIn Profile</a></p>
+        <header>
+            <h1>Konrad Szlawski <span class="cite"></span></h1>
+            <div class="role">IT Business & System Analyst</div>
+            <div class="hero-text">
+                Experienced enterprise analyst <span class="cite">[cite: 20]</span> bridging business needs with technical implementation. Specialized in global web platforms, CMS architecture, and Agile delivery <span class="cite">[cite: 12]</span>. Focused on <strong>quality, concrete requirements, and scalable solutions</strong>.
+            </div>
+        </header>
+
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Business & System Analysis</h3>
+                    <ul>
+                        <li>Requirements Engineering <span class="cite">[cite: 27]</span></li>
+                        <li>Functional Documentation <span class="cite">[cite: 31]</span></li>
+                        <li>Process Analysis & BPMN <span class="cite">[cite: 8, 29]</span></li>
+                        <li>Stakeholder Collaboration <span class="cite">[cite: 40]</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Web & Enterprise Platforms</h3>
+                    <ul>
+                        <li>CMS Platforms</li>
+                        <li>Enterprise Websites</li>
+                        <li>Web Integrations (REST APIs) <span class="cite">[cite: 32]</span></li>
+                        <li>Digital Ecosystems</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Delivery & Execution</h3>
+                    <ul>
+                        <li>Agile / Scrum methodologies <span class="cite">[cite: 7, 12]</span></li>
+                        <li>Product Collaboration</li>
+                        <li>Cross-functional Teams</li>
+                        <li>System Validation <span class="cite">[cite: 48]</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Current Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company">QIAGEN <span class="cite">[cite: 22]</span></div>
+                    <div class="job-title">IT Analyst / Business-System Analyst <span class="cite">[cite: 23]</span></div>
+                </div>
+                <div class="experience-desc">
+                    Working on enterprise digital platforms, CMS transformation initiatives, global web services, data layer configuration, and functional web integrations <span class="cite">[cite: 32, 33, 34]</span>.
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a href="mailto:szlawski.konrad@gmail.com">Email <span class="cite">[cite: 2]</span></a>
+            <a href="https://www.linkedin.com/in/konrad-szlawski" target="_blank" rel="noopener noreferrer">LinkedIn <span class="cite">[cite: 3, 4]</span></a>
+        </footer>
     </div>
+
 </body>
 </html>
