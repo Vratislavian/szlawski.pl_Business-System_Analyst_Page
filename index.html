@@ -49,7 +49,7 @@
             background-color: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(8px);
             padding: 1.5rem 0;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem; /* Zmniejszono z 4rem */
             border-bottom: 1px solid var(--border-color);
             display: flex;
             gap: 2rem;
@@ -92,7 +92,7 @@
         .badge-dot {
             width: 8px;
             height: 8px;
-            background-color: #4CAF50; /* Green dot indicating active/online */
+            background-color: #4CAF50;
             border-radius: 50%;
             display: inline-block;
         }
@@ -107,19 +107,24 @@
         }
 
         .hero-sub {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            color: var(--text-secondary);
+            font-size: 1.2rem; /* Zwiększono z 1rem */
+            margin-bottom: 2.5rem;
+            color: #bbbbbb; /* Nieco jaśniejszy szary dla całości */
         }
 
         .hero-sub .name {
             color: var(--text-primary);
-            font-weight: 500;
+            font-weight: 600; /* Mocniejsze pogrubienie imienia */
         }
 
         .hero-sub .separator {
             margin: 0 0.5rem;
-            color: #444;
+            color: #555;
+        }
+        
+        .hero-sub .title {
+            color: var(--text-primary); /* Rozjaśnienie stanowiska */
+            font-weight: 500;
         }
 
         .hero-text {
@@ -200,10 +205,9 @@
         }
 
         h2 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-secondary);
+            font-size: 1.5rem; /* Zwiększono rozmiar */
+            letter-spacing: -0.02em;
+            color: var(--text-primary); /* Jaśniejszy kolor */
             margin-bottom: 1.5rem;
             font-weight: 600;
             border-bottom: 1px solid var(--border-color);
@@ -269,10 +273,9 @@
         }
 
         .tech-stack h3, .certs-langs h3 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-secondary);
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            color: var(--text-primary);
             margin-bottom: 1.2rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
@@ -428,6 +431,7 @@
             gap: 1.5rem;
             scroll-margin-top: 6rem;
         }
+
         /* Contact Section Styling */
         .contact-wrapper {
             display: flex;
@@ -637,67 +641,4 @@
                         <div class="timeline-role">IT Analyst / Business-System Analyst</div>
                     </div>
                     <ul class="timeline-bullets">
-                        <li>Performing in-depth analysis of IT system development needs, translating business objectives into technical and functional requirements.</li>
-                        <li>Defining and documenting system integrations, data exchange interfaces (REST APIs, middleware), and contributing to data architecture.</li>
-                        <li>Conducting gap analysis of existing functionalities, recommending system architecture and process optimizations for global web platforms.</li>
-                        <li>Owning requirements specifications throughout the project lifecycle to ensure consistency, traceability, and seamless knowledge transfer.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-company">
-                            <span>Comarch</span>
-                            <span class="timeline-date">Aug 2021 — Mar 2022</span>
-                        </div>
-                        <div class="timeline-role">Business Analyst</div>
-                    </div>
-                    <ul class="timeline-bullets">
-                        <li>Facilitated workshops with client stakeholders to elicit and clarify business requirements and drive digital transformation initiatives.</li>
-                        <li>Analyzed and redesigned business workflows, creating process and system models using standard notations (BPMN, UML).</li>
-                        <li>Managed the product backlog: defined user stories, acceptance criteria, solution specifications, and prioritization strategies via Jira and Confluence.</li>
-                        <li>Executed system validation and functional testing of delivered solutions to ensure alignment with expected quality and scope.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-company">
-                            <span>AddSecure Smart Transport</span>
-                            <span class="timeline-date">Jul 2017 — May 2021</span>
-                        </div>
-                        <div class="timeline-role">System Analyst</div>
-                    </div>
-                    <ul class="timeline-bullets">
-                        <li>Administered and configured enterprise systems in alignment with customer-specific requirements, including data migration and access control.</li>
-                        <li>Provided advanced technical support for corporate clients regarding fleet utilization, third-party billing, and operational reporting.</li>
-                        <li>Performed manual application testing, logged defects, and collaborated with clients to define remediation strategies and delivery timelines.</li>
-                        <li>Designed and delivered technical onboarding programs for management teams and new employees to ensure effective adoption of system functionalities.</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-wrapper">
-                <div class="contact-card">
-                    <p>For professional inquiries, corporate collaborations, or strategic networking, feel free to reach out directly through my profile.</p>
-                    <a href="https://www.linkedin.com/in/konrad-szlawski" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        Connect on LinkedIn
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <div class="minimal-footer">
-            &copy; 2026 Konrad Szlawski. All rights reserved.
-        </div>
-    </div>
-
-</body>
-</html>
+                        <li>Performing in
