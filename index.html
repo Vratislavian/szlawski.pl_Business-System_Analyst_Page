@@ -254,6 +254,74 @@
             margin-right: 0.5rem;
         }
 
+        /* Extended Skills Styling */
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed var(--border-color);
+            line-height: 1.5;
+        }
+
+        .tech-stack {
+            margin-top: 3rem;
+        }
+
+        .tech-stack h3, .certs-langs h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tech-pill {
+            padding: 0.4rem 0.8rem;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            transition: border-color 0.2s, background-color 0.2s;
+            cursor: default;
+        }
+
+        .tech-pill:hover {
+            border-color: #555;
+            background-color: #1a1a1a;
+        }
+
+        .certs-langs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .list-block ul {
+            list-style: none;
+        }
+
+        .list-block li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .list-block strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
         /* Experience Section */
         .experience-item {
             margin-bottom: 1.5rem;
@@ -350,33 +418,67 @@
         </header>
 
         <section id="skills">
-            <h2>Core Competencies</h2>
+            <h2>Skillset & Capabilities</h2>
+            
             <div class="grid">
                 <div class="card">
                     <h3>Business & System Analysis</h3>
+                    <div class="card-desc">Bridging business objectives with technical specifications.</div>
                     <ul>
-                        <li>Requirements Engineering</li>
-                        <li>Functional Documentation</li>
-                        <li>Process Analysis & BPMN</li>
-                        <li>Stakeholder Collaboration</li>
+                        <li>Requirements Engineering [cite: 27]</li>
+                        <li>BPMN & UML Modeling </li>
+                        <li>Gap Analysis & Feasibility [cite: 28, 29]</li>
+                        <li>User Stories & Acceptance Criteria </li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>Web & Enterprise Platforms</h3>
+                    <div class="card-desc">Architecting content and data delivery systems.</div>
                     <ul>
-                        <li>CMS Platforms</li>
-                        <li>Enterprise Websites</li>
-                        <li>Web Integrations (REST APIs)</li>
-                        <li>Digital Ecosystems</li>
+                        <li>CMS Platforms (Sitecore)</li>
+                        <li>Enterprise Digital Ecosystems</li>
+                        <li>Data Layer & Integrations [cite: 32, 33]</li>
+                        <li>REST APIs [cite: 32]</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>Delivery & Execution</h3>
+                    <div class="card-desc">Driving predictable, iterative product increments.</div>
                     <ul>
-                        <li>Agile / Scrum methodologies</li>
-                        <li>Product Collaboration</li>
-                        <li>Cross-functional Teams</li>
-                        <li>System Validation</li>
+                        <li>Agile / Scrum Methodologies [cite: 7]</li>
+                        <li>Backlog Orchestration </li>
+                        <li>Cross-functional Team Alignment</li>
+                        <li>System Validation & UAT [cite: 48]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <h3>Tools & Technologies</h3>
+                <div class="pill-container">
+                    <div class="tech-pill">Sitecore XM Cloud / XP</div>
+                    <div class="tech-pill">Jira & Confluence [cite: 45]</div>
+                    <div class="tech-pill">Miro</div>
+                    <div class="tech-pill">BPMN Tools [cite: 8]</div>
+                    <div class="tech-pill">REST APIs [cite: 32]</div>
+                    <div class="tech-pill">Git / GitHub</div>
+                    <div class="tech-pill">HTML / CSS</div>
+                </div>
+            </div>
+
+            <div class="certs-langs">
+                <div class="list-block">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li><strong>PSPO I</strong> — Professional Scrum Product Owner™ I </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li><strong>English</strong> — Full Professional [cite: 16]</li>
+                        <li><strong>Spanish</strong> — Professional Working [cite: 15]</li>
+                        <li><strong>Polish</strong> — Native [cite: 17]</li>
                     </ul>
                 </div>
             </div>
