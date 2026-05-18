@@ -16,7 +16,7 @@
         }
 
         html {
-            scroll-behavior: smooth; /* Płynne przewijanie do sekcji */
+            scroll-behavior: smooth;
         }
 
         * {
@@ -42,14 +42,14 @@
             width: 100%;
         }
 
-        /* Minimalistyczne Menu */
+        /* Minimalist Navigation */
         nav {
             position: sticky;
             top: 0;
             background-color: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(8px);
             padding: 1.5rem 0;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             border-bottom: 1px solid var(--border-color);
             display: flex;
             gap: 2rem;
@@ -61,46 +61,142 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        /* Header & Hero */
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
         header {
             margin-bottom: 5rem;
-            padding-top: 2rem;
+            padding-top: 1rem;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background-color: #111;
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #4CAF50; /* Green dot indicating active/online */
+            border-radius: 50%;
+            display: inline-block;
         }
 
         h1 {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             font-weight: 600;
             letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
             color: var(--text-primary);
         }
 
-        .role {
+        .hero-sub {
             font-size: 1rem;
-            color: var(--text-secondary);
-            font-weight: 400;
             margin-bottom: 2rem;
-        }
-
-        .hero-text {
-            font-size: 1.25rem;
             color: var(--text-secondary);
-            font-weight: 400;
-            line-height: 1.5;
-            max-width: 650px;
         }
 
-        .hero-text strong {
+        .hero-sub .name {
             color: var(--text-primary);
             font-weight: 500;
         }
 
-        /* Sections */
+        .hero-sub .separator {
+            margin: 0 0.5rem;
+            color: #444;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-bottom: 3rem;
+        }
+
+        /* Metrics Row */
+        .metrics-row {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+        }
+
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .principle-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .principle-card:hover {
+            border-color: #444;
+        }
+
+        .principle-card h4 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .principle-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Other Sections */
         section {
             margin-bottom: 5rem;
-            scroll-margin-top: 6rem; /* Zapobiega zasłanianiu nagłówka przez menu po przewinięciu */
+            scroll-margin-top: 6rem;
         }
 
         h2 {
@@ -193,17 +289,6 @@
             gap: 1.5rem;
             scroll-margin-top: 6rem;
         }
-
-        a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: var(--accent-color);
-        }
     </style>
 </head>
 <body>
@@ -212,57 +297,57 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#skills">Skills</a>
-            <a href="#about">About Me</a>
+            <a href="#about">Experience</a>
             <a href="#contact">Contact</a>
         </nav>
 
-<header id="home">
-    <div class="status-badge">
-        <span class="badge-dot"></span> Focus: Enterprise Web Platforms & CMS Architecture
-    </div>
+        <header id="home">
+            <div class="status-badge">
+                <span class="badge-dot"></span> Focus: Enterprise Web Platforms & CMS Architecture
+            </div>
 
-    <h1>Engineering clear requirements for complex digital ecosystems.</h1>
-    
-    <div class="hero-sub">
-        <span class="name">Konrad Szlawski</span>
-        <span class="separator">/</span>
-        <span class="title">IT Business & System Analyst</span>
-    </div>
+            <h1>Engineering clear requirements for complex digital ecosystems.</h1>
+            
+            <div class="hero-sub">
+                <span class="name">Konrad Szlawski</span>
+                <span class="separator">/</span>
+                <span class="title">IT Business & System Analyst</span>
+            </div>
 
-    <p class="hero-text">
-        I specialize in translating complex business objectives into a precise functional requirements architecture. I have many years of experience working on global enterprise-class systems, data integrations (REST APIs), and CMS system transformations, delivering value in agile environments (Agile/Scrum).
-    </p>
+            <p class="hero-text">
+                I specialize in translating intricate business goals into precise functional requirements. With extensive experience in enterprise-grade global solutions, data layer configurations, and CMS ecosystems, I bridge the gap between stakeholder vision and scalable technical execution within Agile environments.
+            </p>
 
-    <div class="metrics-row">
-        <div class="metric-item">
-            <div class="metric-value">9+</div>
-            <div class="metric-label">Years of IT Analysis Experience</div>
-        </div>
-        <div class="metric-item">
-            <div class="metric-value">Enterprise</div>
-            <div class="metric-label">Global Scale Projects Delivered</div>
-        </div>
-        <div class="metric-item">
-            <div class="metric-value">4</div>
-            <div class="metric-label">Key Industries Covered</div>
-        </div>
-    </div>
+            <div class="metrics-row">
+                <div class="metric-item">
+                    <div class="metric-value">9+</div>
+                    <div class="metric-label">Years of Experience</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">Enterprise</div>
+                    <div class="metric-label">Global Scale Delivery</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">Multi-Domain</div>
+                    <div class="metric-label">Key Industries Covered</div>
+                </div>
+            </div>
 
-    <div class="principles-grid">
-        <div class="principle-card">
-            <h4>Technical Alignment</h4>
-            <p>Designing business-technology interfaces with a deep understanding of data layers and APIs.</p>
-        </div>
-        <div class="principle-card">
-            <h4>Traceable Specifications</h4>
-            <p>Providing functional documentation that eliminates guesswork during the development and testing phases.</p>
-        </div>
-        <div class="principle-card">
-            <h4>Agile Mindset</h4>
-            <p>Active management of the product backlog aimed at predictable and incremental implementation of solutions.</p>
-        </div>
-    </div>
-</header>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h4>Technical Alignment</h4>
+                    <p>Designing system interfaces, data structures, and REST API integrations with a deep understanding of the underlying technology stack.</p>
+                </div>
+                <div class="principle-card">
+                    <h4>Traceable Specifications</h4>
+                    <p>Authoring functional documentation that eliminates ambiguity, streamlining the development lifecycle and QA execution.</p>
+                </div>
+                <div class="principle-card">
+                    <h4>Agile Orchestration</h4>
+                    <p>Active backlog management focused on predictability, value-driven prioritization, and incremental product delivery.</p>
+                </div>
+            </div>
+        </header>
 
         <section id="skills">
             <h2>Core Competencies</h2>
@@ -311,7 +396,7 @@
         </section>
 
         <footer id="contact">
-            <a href="https://www.linkedin.com/in/konrad-szlawski" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/konrad-szlawski" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
         </footer>
     </div>
 
