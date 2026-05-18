@@ -428,6 +428,69 @@
             gap: 1.5rem;
             scroll-margin-top: 6rem;
         }
+        /* Contact Section Styling */
+        .contact-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            width: 100%;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: #444;
+            transform: translateY(-2px);
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 480px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--text-primary);
+            color: var(--bg-color) !important;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+        }
+
+        .contact-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Minimal Footer */
+        .minimal-footer {
+            margin-top: 6rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #444;
+        }
     </style>
 </head>
 <body>
@@ -616,9 +679,24 @@
             </div>
         </section>
 
-        <footer id="contact">
-            <a href="https://www.linkedin.com/in/konrad-szlawski" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-        </footer>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <p>For professional inquiries, corporate collaborations, or strategic networking, feel free to reach out directly through my profile.</p>
+                    <a href="https://www.linkedin.com/in/konrad-szlawski" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="minimal-footer">
+            &copy; 2026 Konrad Szlawski. All rights reserved.
+        </div>
     </div>
 
 </body>
