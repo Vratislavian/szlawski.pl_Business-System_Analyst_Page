@@ -322,31 +322,102 @@
             font-weight: 500;
         }
         
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 1.5rem;
+        /* About & Experience Timeline Section */
+        .about-summary {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed var(--border-color);
         }
 
-        .experience-header {
+        .about-summary p {
+            margin-bottom: 1rem;
+        }
+
+        .about-summary p:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .timeline-item {
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 6px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #444;
+            transition: background-color 0.2s;
+        }
+
+        .timeline-item.current {
+            border-left-color: #555;
+        }
+
+        .timeline-item.current::before {
+            background-color: var(--accent-color);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+        }
+
+        .timeline-header {
+            margin-bottom: 1rem;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-primary);
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.25rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
-        .company {
-            font-weight: 500;
-            font-size: 1rem;
-        }
-
-        .job-title {
+        .timeline-date {
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            font-size: 0.95rem;
+            font-weight: 400;
+            font-family: monospace;
         }
 
-        .experience-desc {
+        .timeline-role {
             font-size: 0.95rem;
             color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
+
+        .timeline-bullets {
+            list-style: none;
+        }
+
+        .timeline-bullets li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .timeline-bullets li::before {
+            content: "—";
+            color: #555;
+            margin-right: 0.75rem;
         }
 
         /* Footer & Links */
@@ -485,15 +556,63 @@
         </section>
 
         <section id="about">
-            <h2>Current Experience</h2>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="company">QIAGEN</div>
-                    <div class="job-title">IT Analyst / Business-System Analyst</div>
+            <h2>About & Experience</h2>
+            
+            <div class="about-summary">
+                <p>Over the past several years, I have been involved in the analysis, design, and evolution of enterprise digital platforms used by global organizations operating at scale.</p>
+                <p>My experience combines business analysis, system analysis, and close collaboration with technical teams across complex web ecosystems — including CMS platforms, integrations, digital services, and customer-facing web solutions. I specialize in bridging the gap between business expectations and technical implementation — helping teams deliver clear requirements, aligned solutions, and efficient collaboration throughout the product lifecycle.</p>
+            </div>
+
+            <div class="timeline">
+                
+                <div class="timeline-item current">
+                    <div class="timeline-header">
+                        <div class="timeline-company">
+                            <span>QIAGEN</span>
+                            <span class="timeline-date">Apr 2022 — Present</span>
+                        </div>
+                        <div class="timeline-role">IT Analyst / Business-System Analyst</div>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Performing in-depth analysis of IT system development needs, translating business objectives into technical and functional requirements.</li>
+                        <li>Defining and documenting system integrations, data exchange interfaces (REST APIs, middleware), and contributing to data architecture.</li>
+                        <li>Conducting gap analysis of existing functionalities, recommending system architecture and process optimizations for global web platforms.</li>
+                        <li>Owning requirements specifications throughout the project lifecycle to ensure consistency, traceability, and seamless knowledge transfer.</li>
+                    </ul>
                 </div>
-                <div class="experience-desc">
-                    Working on enterprise digital platforms, CMS transformation initiatives, global web services, data layer configuration, and functional web integrations.
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-company">
+                            <span>Comarch</span>
+                            <span class="timeline-date">Aug 2021 — Mar 2022</span>
+                        </div>
+                        <div class="timeline-role">Business Analyst</div>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Facilitated workshops with client stakeholders to elicit and clarify business requirements and drive digital transformation initiatives.</li>
+                        <li>Analyzed and redesigned business workflows, creating process and system models using standard notations (BPMN, UML).</li>
+                        <li>Managed the product backlog: defined user stories, acceptance criteria, solution specifications, and prioritization strategies via Jira and Confluence.</li>
+                        <li>Executed system validation and functional testing of delivered solutions to ensure alignment with expected quality and scope.</li>
+                    </ul>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-company">
+                            <span>AddSecure Smart Transport</span>
+                            <span class="timeline-date">Jul 2017 — May 2021</span>
+                        </div>
+                        <div class="timeline-role">System Analyst</div>
+                    </div>
+                    <ul class="timeline-bullets">
+                        <li>Administered and configured enterprise systems in alignment with customer-specific requirements, including data migration and access control.</li>
+                        <li>Provided advanced technical support for corporate clients regarding fleet utilization, third-party billing, and operational reporting.</li>
+                        <li>Performed manual application testing, logged defects, and collaborated with clients to define remediation strategies and delivery timelines.</li>
+                        <li>Designed and delivered technical onboarding programs for management teams and new employees to ensure effective adoption of system functionalities.</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
